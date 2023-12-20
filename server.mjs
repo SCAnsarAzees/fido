@@ -118,6 +118,20 @@ app.get('/.well-known/assetlinks.json', (req, res) => {
   res.json(assetlinks);
 });
 
+app.get('/.well-known/apple-app-site-association', (req, res) => {
+  const assetlinks = [];
+ assetlinks.push({
+  webcredentials: {
+    apps: [
+      "TK2YD7ZJ2Y.com.scramble.ScrambleFIDO"
+    ]
+  }
+
+ });
+
+  res.json(assetlinks);
+});
+
 app.use('/auth', auth);
 
 // listen for req :)
