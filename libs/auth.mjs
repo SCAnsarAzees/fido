@@ -28,7 +28,7 @@ import { isoBase64URL } from '@simplewebauthn/server/helpers';
 import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node'
 
-const adapter = new JSONFile('/tmp/db.json');
+const adapter = new JSONFile('.data/db.json');
 const db = new Low(adapter);
 await db.read();
 
